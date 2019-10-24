@@ -86,7 +86,7 @@ locals {
         rights = []
         }, rule, {
         topic_name = topic.name
-      })
+      })  if rule.name != ""
     ]
   ])
 
