@@ -82,7 +82,7 @@ locals {
   topic_authorization_rules = flatten([
     for topic in local.topics : [
       for rule in topic.authorization_rules : merge({
-        name   = null
+        name   = ""
         rights = []
         }, rule, {
         topic_name = topic.name
