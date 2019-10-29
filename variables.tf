@@ -107,7 +107,7 @@ locals {
         enable_dead_lettering_on_message_expiration = null
         }, subscription, {
         topic_name = topic.name
-      })
+      }) if subscription.name != ""
     ]
   ])
 
